@@ -4,10 +4,8 @@ I'm currently a Computer engineering major, Software minor Masters student.
 I've gotten my bachelor's degree from Shahid Beheshti University, faculty of computer engineering in Aug 2022.
 Im intrested in Computer graphics and game development, I've also been working in Image Nahan Co. and Concealand studio for 2 years.
 
-<div align="center" style="height: 20px; width: 20px;">
-
+<div align="center">
 ![SonicDancing](https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062 =20x20)
-
 </div>
 
 [![](https://img.shields.io/badge/-Java-red?logoColor=white&style=for-the-badge&logo=JAVA)](https://www.java.com/)
