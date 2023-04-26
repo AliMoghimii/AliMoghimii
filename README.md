@@ -3,7 +3,7 @@
 Im a Student at Shahid Beheshti University of Computer Science and Engineering - Tehran Iran
 Intrested in becoming a full time game developer and 3D modeler , I've also been working in Avijeh and SBU Gamelab as an intern (continuing)
 
-<div align="center" style="height: 50px; width: 50px;">
+<div align="center" style="height: 20px; width: 20px;">
 
 ![SonicDancing](https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062)
 
