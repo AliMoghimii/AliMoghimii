@@ -1,8 +1,7 @@
 ### Hi there 👋
 
 * Masters student, Computer engineering major, Software minor.
-* Got my bachelor's degree from Shahid Beheshti University, faculty of computer engineering.
-    * Graduated in Aug 2022.
+* I have a bachelor's degree from Shahid Beheshti University, faculty of computer engineering (Graduated on Aug 2022).
 * Employee at Image Nahan Co. / Concealand studio for 2 years (on going). 
 * Member of the SBU Game and VR laboratory at Shahid Beheshti University for 4 years (on going)
 * Im intrested in Computer graphics and game development.
