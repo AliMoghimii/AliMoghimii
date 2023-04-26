@@ -1,7 +1,9 @@
 ### Hi there 👋
 
 * Computer engineering major, Software minor Masters student.
-* Graduated in Aug 2022, Bachelor's degree from Shahid Beheshti University, faculty of computer engineering.
+    * First Year (on going)
+* Got my bachelor's degree from Shahid Beheshti University, faculty of computer engineering.
+    * Graduated in Aug 2022. 
 * Im intrested in Computer graphics and game development, I've also been working in Image Nahan Co. and Concealand studio for 2 years.
 
 <div align="center">
