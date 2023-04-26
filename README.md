@@ -5,7 +5,7 @@ I've gotten my bachelor's degree from Shahid Beheshti University, faculty of com
 Im intrested in Computer graphics and game development, I've also been working in Image Nahan Co. and Concealand studio for 2 years.
 
 <div align="center">
-    <img align="center" src="https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062" data-canonical-src="https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062" width="184" height="249" />
+    <img align="center" src="[https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062](https://tenor.com/bgPcE.gif)" data-canonical-src="[https://media1.tenor.com/images/4e3c32c1f2a5a5e1104fcd4db7f4be5a/tenor.gif?itemid=16364062](https://tenor.com/bgPcE.gif)" width="184" height="249" />
 </div>
 
 [![](https://img.shields.io/badge/-Java-red?logoColor=white&style=for-the-badge&logo=JAVA)](https://www.java.com/)
