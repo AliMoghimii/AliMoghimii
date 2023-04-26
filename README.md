@@ -1,7 +1,8 @@
 ### Hi there 👋
 
-Im a Student at Shahid Beheshti University of Computer Science and Engineering - Tehran Iran
-Intrested in becoming a full time game developer and 3D modeler , I've also been working in Avijeh and SBU Gamelab as an intern (continuing)
+I'm currently a Computer engineering major, Software minor Masters student.
+I've gotten my bachelor's degree from Shahid Beheshti University, faculty of computer engineering in Aug 2022.
+Im intrested in Computer graphics and game development, I've also been working in Image Nahan Co. in Concealand studio for 2 years.
 
 <div align="center" style="height: 20px; width: 20px;">
 
