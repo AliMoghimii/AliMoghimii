@@ -17,7 +17,6 @@
 [![](https://img.shields.io/badge/-Unity-black?style=for-the-badge&logo=unity)](https://unity.com/)
 
 [![Ali Moghimi's github stats](https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&theme=chartreuse-dark)]
-(https://github.com/anuraghazra/github-readme-stats)
 
 ---
 
