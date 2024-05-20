@@ -3,7 +3,6 @@
 
 I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
 
-* Masters student, Computer engineering major, Software minor.
 * I have a bachelor's degree from Shahid Beheshti University, faculty of computer engineering (Graduated on Aug 2022).
 * Employee at Image Nahan Co. / Concealand studio for 2 years. 
 * Member of the SBU Game laboratory at Shahid Beheshti University for 6 years (on going).
