@@ -4,8 +4,10 @@
 I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
 
 * I have a bachelor's degree from Shahid Beheshti University, faculty of computer engineering (Graduated on Aug 2022).
-* Employee at Image Nahan Co. / Concealand studio for 2 years. 
-* Member of the SBU Game laboratory at Shahid Beheshti University for 6 years (on going).
+* Employee at Huralya Co. for 6 months. 
+* Employee at Image Nahan Co. / Concealand studio for 2 years.
+* Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University (on going).
+* Member of the SBU Game laboratory at Shahid Beheshti University (on going).
   
 Feel free to contact me at my mail email address : ali_moghimii@yahoo.com
 
