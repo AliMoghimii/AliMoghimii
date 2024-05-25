@@ -3,7 +3,7 @@
 
 I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
 
-* I have a bachelor's degree from Shahid Beheshti University, faculty of computer engineering (Graduated on Aug 2022).
+* Bachelor's graduate from Shahid Beheshti University, Faculty of Computer Engineering (Graduated on Aug 2022).
 * Employee at Huralya Co. for 6 months. 
 * Employee at Image Nahan Co. / Concealand studio for 2 years.
 * Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University (on going).
