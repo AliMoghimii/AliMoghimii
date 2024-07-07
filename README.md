@@ -9,7 +9,7 @@ I love game development and fields in technical game research, computer graphics
 * Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University (on going).
 * Member of the SBU Game laboratory at Shahid Beheshti University (on going).
   
-Feel free to contact me at my mail email address : ali_moghimii@yahoo.com
+Feel free to contact me at my main email address : ali_moghimii@yahoo.com
 
 # Skills & Technologies:
 
