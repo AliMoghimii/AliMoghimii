@@ -6,8 +6,8 @@ I love game development and fields in technical game research, computer graphics
 * Bachelor's graduate from Shahid Beheshti University, Faculty of Computer Engineering (Graduated on Aug 2022).
 * Employee at Huralya Co. for 6 months. 
 * Employee at Image Nahan Co. / Concealand studio for 2 years.
-* Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University (on going).
-* Member of the SBU Game laboratory at Shahid Beheshti University (on going).
+* Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University.
+* Member of the SBU Game laboratory at Shahid Beheshti University.
 
 # Skills & Technologies:
 
