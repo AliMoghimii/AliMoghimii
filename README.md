@@ -1,6 +1,5 @@
 
-<h1 style="font-size:14px"> Hi there <img align="center" src="![sonidancing](https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798)
-" width="28" height="38" />  </h1>
+<h1 style="font-size:14px"> Hi there <img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
 
 I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
 
