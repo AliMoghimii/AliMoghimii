@@ -1,4 +1,5 @@
 
+<img width="1591" height="625" alt="my-image (4)" src="https://github.com/user-attachments/assets/a488011c-d398-42a8-b321-1cbc6e61617f" />
 <h1 style="font-size:14px"> Hi there <img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
 
 I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
