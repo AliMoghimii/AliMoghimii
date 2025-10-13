@@ -1,14 +1,7 @@
 
 <h1 style="font-size:14px"> Hi there <img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
 
-I love game development and fields in technical game research, computer graphics, VR/AR/MR and more... .
-
-* Bachelor's graduate from Shahid Beheshti University, Faculty of Computer Engineering (Graduated on Aug 2022).
-* Employee at Vista Group Co. (Current)
-* Employee at Huralya Co. for 6 months. 
-* Employee at Image Nahan Co. / Concealand studio for 2 years.
-* Member of the SBU Virtual and Augmented laboratory at Shahid Beheshti University.
-* Member of the SBU Game laboratory at Shahid Beheshti University.
+I love game development!
 
 # Skills & Technologies:
 
