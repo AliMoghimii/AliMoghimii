@@ -1,39 +1,49 @@
 
-<h1 style="font-size:14px"> Hi there <img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
+<h1 style="font-size:14px">
+    Hi there 
+<img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
 
-I love game development!
+<p align="center">
+    <strong>I love game development!</strong><br/>
+    Passionate about technical game research, learning new technologies, building my own games.
+</p>
 
-# Skills & Technologies:
-
-<div align="center">
-    
-[![](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://github.com/AliMoghimii)
-
-[![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://github.com/AliMoghimii)
-
-[![](https://img.shields.io/badge/-Unity-black?style=for-the-badge&logo=unity)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=GodotEngine&logoColor=white)](https://github.com/AliMoghimii)
-[![](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine&logoColor=white)](https://github.com/AliMoghimii)
-
-![AliMoghimii's Stats](https://github-readme-stats.vercel.app/api?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&count_private=true)
-
-![AliMoghimii's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&layout=compact)
-
-</div>
-
-# Socials & Contact Info:
+---
 
 <div align="center">
 
-[![](https://img.shields.io/badge/GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ali.moghiimii@gmail.com)
-[![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-moghimii/)
-    
-</div>
+## 💻 Skills & Technologies
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&count_private=true" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&layout=compact" alt="Top Languages" />
+</p>
+
+---
+
+## 🌍 Connect With Me
+
+<p align="center">
+  <a href="mailto:ali.moghiimii@gmail.com">
+    <img src="https://img.shields.io/badge/GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://www.linkedin.com/in/ali-moghimii/">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+</p>
