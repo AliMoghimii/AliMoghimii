@@ -36,13 +36,23 @@
   <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" /></a>
 </p>
 
-<!-- Dark mode -->
-![GitHub stats dark](https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham#gh-dark-mode-only)
-![Top Langs dark](https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham#gh-dark-mode-only)
+<div align="center">
 
-<!-- Light mode -->
-![GitHub stats light](https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite#gh-light-mode-only)
-![Top Langs light](https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite#gh-light-mode-only)
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham" />
+  <img alt="GitHub stats"
+       src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham" />
+  <img alt="Top Languages"
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite" />
+</picture>
+
+</div>
 
 
 
