@@ -36,10 +36,16 @@
   <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" /></a>
 </p>
 
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&count_private=true" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&theme=graywhite&show_icons=true&hide_border=true&layout=compact" alt="Top Languages" />
+  <img height=450 width=450 src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham#gh-light-mode-only" alt="GitHub stats" />
+  <img height=342 width=342 src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham" alt="Top Languages" />
 </p>
+
+<!-- <p align="center">
+  <img height=450 width=450 src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite" alt="GitHub stats" />
+  <img height=342 width=342 src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite" alt="Top Languages" />
+</p> -->
 
 ---
 
