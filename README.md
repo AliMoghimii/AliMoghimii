@@ -3,10 +3,16 @@
     Hi there 
 <img align="center" src="https://github.com/user-attachments/assets/e6c21af4-e282-4333-bc8b-c13ef6640798" width="28" height="38" />  </h1>
 
+
 <p align="center">
-    <b>I love game development!</b><br/>
-    Passionate about technical game research, learning new technologies, building my own games.
+  <strong>I love game development!</strong><br/>
+  Passionate about technical game research, learning new technologies, building my own games.<br/>
+  <sub>
+    <b>BSc Graduate in Computer Engineering</b> | Shahid Beheshti University, Tehran, Iran <br/>
+    <b>MSc Student in Computer Science for Games Programming</b> | University of Hull, Kingston upon Hull, United Kingdom
+  </sub>
 </p>
+
 
 ---
 
