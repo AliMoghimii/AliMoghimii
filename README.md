@@ -38,12 +38,20 @@
 
 <p align="center">
   <!-- Dark mode -->
-  <img height="450" width="450" src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham#gh-dark-mode-only" alt="GitHub stats" />
-  <img height="342" width="342" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham#gh-dark-mode-only" alt="Top Languages" />
+  <img height="450" width="450"
+       src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham#gh-dark-mode-only"
+       alt="GitHub stats (dark mode)" />
+  <img height="342" width="342"
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham#gh-dark-mode-only"
+       alt="Top Languages (dark mode)" />
 
   <!-- Light mode -->
-  <img height="450" width="450" src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite#gh-light-mode-only" alt="GitHub stats" />
-  <img height="342" width="342" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite#gh-light-mode-only" alt="Top Languages" />
+  <img height="450" width="450"
+       src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite#gh-light-mode-only"
+       alt="GitHub stats (light mode)" />
+  <img height="342" width="342"
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite#gh-light-mode-only"
+       alt="Top Languages (light mode)" />
 </p>
 
 
