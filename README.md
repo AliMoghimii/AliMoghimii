@@ -36,8 +36,6 @@
   <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" /></a>
 </p>
 
-<div align="center">
-
 <!-- Dark mode -->
 ![GitHub stats dark](https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham#gh-dark-mode-only)
 ![Top Langs dark](https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham#gh-dark-mode-only)
@@ -46,7 +44,6 @@
 ![GitHub stats light](https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite#gh-light-mode-only)
 ![Top Langs light](https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite#gh-light-mode-only)
 
-</div>
 
 
 
