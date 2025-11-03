@@ -38,36 +38,22 @@
 
 <div align="center">
 
-  <!-- GitHub Stats -->
   <picture>
-    <!-- High Contrast Mode (Dark) -->
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=highcontrast" />
-    <!-- High Contrast Mode (Light) -->
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)"
-            srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=default" />
-    <!-- Normal Dark Mode -->
-    <source media="(prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham" />
-    <!-- Default (Light Mode) -->
-    <img alt="GitHub stats" height="200"
-         src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
+    <!-- 
+    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=highcontrast" />
+    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=default" />
+    -->
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham" />
+    <img alt="GitHub stats" height="200" src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
   </picture>
 
-  <!-- Top Languages -->
   <picture>
-    <!-- High Contrast Mode (Dark) -->
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=highcontrast" />
-    <!-- High Contrast Mode (Light) -->
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)"
-            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=default" />
-    <!-- Normal Dark Mode -->
-    <source media="(prefers-color-scheme: dark)"
-            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham" />
-    <!-- Default (Light Mode) -->
-    <img alt="Top Languages" height="200"
-         src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite" />
+    <!--
+    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=highcontrast" />
+    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=default" /> 
+    -->
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham" />
+    <img alt="Top Languages" height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite" />
   </picture>
 
 </div>
