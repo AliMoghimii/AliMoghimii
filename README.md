@@ -5,8 +5,7 @@
 
 
 <p align="center">
-  <strong>I love game development!</strong><br/>
-  Passionate about technical game research, learning new technologies, building my own games.<br/>
+  <strong>Passionate about technical game research, learning new technologies, building my own games.</strong><br/>
   <sub>
     <b>BSc Graduate in Computer Engineering</b> | Shahid Beheshti University, Tehran, Iran <br/>
     <b>MSc Student in Computer Science for Games Programming</b> | University of Hull, Kingston upon Hull, United Kingdom
