@@ -37,23 +37,17 @@
 
 <div align="center">
 
-  <picture>
-    <!-- 
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=highcontrast" />
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=default" />
-    -->
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=gotham" />
-    <img alt="GitHub stats" height="175" src="https://github-readme-stats.vercel.app/api?username=AliMoghimii&show_icons=true&hide_border=true&count_private=true&theme=graywhite" />
-  </picture>
-
-  <picture>
-    <!--
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=highcontrast" />
-    <source media="(prefers-contrast: more) and (prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=default" /> 
-    -->
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=gotham" />
-    <img alt="Top Languages" height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AliMoghimii&show_icons=true&hide_border=true&layout=compact&theme=graywhite" />
-  </picture>
+<picture>
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark"
+    media="(prefers-color-scheme: dark)"
+  />
+  <source
+    srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+  />
+  <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
+</picture>
 
 </div>
 
