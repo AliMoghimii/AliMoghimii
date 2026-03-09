@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Moghimi - Game/Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --surface: #111118;
+            --border: #1e1e2e;
+            --accent: #FFC90E;
+            --accent2: #f4a261;
+            --text: #e8e8f0;
+            --muted: #6b6b80;
+            --grid: rgba(127,219,202,0.04);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Syne', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: -200px;
+            left: -200px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(127,219,202,0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: drift 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes drift { to { transform: translate(140px, 90px); } }
+
+        #hero-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .settings-wrap { position: relative; }
+
+        .settings-btn {
+            background: none;
+            border: 1px solid transparent;
+            color: var(--muted);
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.18s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .settings-btn:hover { color: var(--accent); border-color: var(--border); }
+
+        .settings-btn svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s;
+        }
+
+        .settings-wrap.open .settings-btn svg { transform: rotate(45deg); }
+
+        .settings-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px;
+            min-width: 140px;
+            z-index: 200;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .settings-wrap.open .settings-dropdown { display: block; }
+
+        .settings-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            color: var(--muted);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            padding: 0 4px;
+        }
+
+        .perf-toggle {
+            display: flex;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .perf-toggle button {
+            flex: 1;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 0;
+            cursor: pointer;
+            transition: all 0.18s;
+        }
+
+        .perf-toggle button.active { background: var(--border); color: var(--accent); }
+        .perf-toggle button:hover:not(.active) { color: var(--text); }
+
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 56px;
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            background: rgba(10,10,15,0.75);
+        }
+
+        .nav-logo {
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-decoration: none;
+        }
+
+        .nav-links { display: flex; gap: 36px; list-style: none; }
+
+        .nav-links a {
+            font-size: 12px;
+            color: var(--muted);
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            letter-spacing: 0.06em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .hero {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 140px 56px 100px;
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.2s forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag::before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .hero-name {
+            font-size: clamp(56px, 9vw, 108px);
+            font-weight: 800;
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.35s forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-name em { font-style: normal; color: var(--accent); }
+
+        .hero-desc {
+            font-size: 16px;
+            color: var(--muted);
+            max-width: 460px;
+            line-height: 1.75;
+            margin-bottom: 52px;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.5s forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp 0.6s 0.65s forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary { background: var(--accent); color: var(--bg); font-weight: 700; }
+        .btn-primary:hover { background: #a0ede0; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(127,219,202,0.22); }
+
+        .btn-secondary { border: 1px solid var(--border); color: var(--text); background: var(--surface); }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+        .hero-graphic {
+            position: absolute;
+            right: 56px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            animation: fadeIn 1s 1s forwards;
+            width: 260px;
+            height: 260px;
+            z-index: 2;
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        .hero-graphic-inner {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            animation: floatSvg 7s ease-in-out infinite;
+        }
+
+        .hero-graphic-inner svg { width: 260px; height: 260px; position: absolute; top: 0; left: 0; }
+
+        .hero-graphic-inner .profile-photo {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110px; height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 0 6px rgba(127,219,202,0.08), 0 0 32px rgba(127,219,202,0.15);
+            z-index: 2;
+        }
+
+        @keyframes floatSvg {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-18px); }
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 44px;
+            left: 56px;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 0.18em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            animation: fadeUp 0.6s 1.1s forwards;
+            z-index: 2;
+        }
+
+        .scroll-hint::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 52px;
+            background: linear-gradient(to bottom, var(--muted), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse { 50% { opacity: 0.25; } }
+
+        .wip-banner {
+            position: relative;
+            z-index: 1;
+            max-width: 1160px;
+            margin: 0 auto 80px;
+            padding: 0 56px;
+        }
+
+        .wip-inner {
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent2);
+            background: var(--surface);
+            padding: 18px 26px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--muted);
+            opacity: 0;
+            animation: fadeUp 0.6s 0.9s forwards;
+        }
+
+        .wip-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--accent2);
+            flex-shrink: 0;
+            animation: blink 1.6s ease-in-out infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0.25; } }
+
+        section {
+            position: relative;
+            z-index: 1;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 80px 56px;
+        }
+
+        .section-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--accent);
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+
+        .about-text p { color: var(--muted); line-height: 1.85; font-size: 15px; margin-bottom: 18px; }
+        .about-text p:last-child { margin-bottom: 0; }
+
+        .about-stats { display: flex; flex-direction: column; gap: 14px; }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 18px 22px;
+            transition: border-color 0.2s;
+        }
+
+        .stat-card:hover { border-color: var(--accent); }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--accent);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .stat-degree { font-size: 14px; color: var(--text); font-weight: 700; margin-bottom: 6px; }
+        .stat-uni { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--accent); letter-spacing: 0.05em; }
+        .stat-location { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.05em; margin-top: 2px; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 14px; }
+
+        .skill-chip {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 10px 12px;
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--muted);
+            transition: all 0.22s;
+            cursor: default;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(127,219,202,0.04);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .skill-chip img { width: 30px; height: 30px; display: block; }
+
+        .connect-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+        .connect-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 26px 22px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.22s;
+        }
+
+        .connect-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.45); }
+
+        .connect-icon {
+            width: 38px; height: 38px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--border);
+            border-radius: 8px;
+            margin-bottom: 4px;
+        }
+
+        .connect-name { font-weight: 700; font-size: 14px; }
+        .connect-handle { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); }
+
+        .connect-arrow {
+            margin-top: auto;
+            padding-top: 12px;
+            color: var(--accent);
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            transition: transform 0.2s;
+        }
+
+        .connect-card:hover .connect-arrow { transform: translate(3px, -3px); }
+
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid var(--border);
+            padding: 28px 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 900px) {
+            nav { padding: 16px 24px; }
+            .nav-links { display: none; }
+            .hero { padding: 110px 24px 70px; }
+            .hero-graphic { display: none; }
+            section { padding: 60px 24px; }
+            .connect-grid { grid-template-columns: 1fr 1fr; }
+            .wip-banner { padding: 0 24px; }
+            footer { flex-direction: column; gap: 8px; padding: 24px; text-align: center; }
+            .scroll-hint { left: 24px; }
+        }
+
+        @media (max-width: 480px) {
+            .connect-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="hero-canvas"></canvas>
+
+    <nav>
+        <a href="#" class="nav-logo">ali.moghimi</a>
+        <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#connect">connect</a></li>
+        </ul>
+        <div class="settings-wrap" id="settings-wrap">
+            <button class="settings-btn" onclick="toggleSettings()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+                </svg>
+                Setings
+            </button>
+            <div class="settings-dropdown">
+                <div class="settings-label">Background</div>
+                <div class="perf-toggle">
+                    <button id="btn-eco" class="active" onclick="setBg('eco')">ECO</button>
+                    <button id="btn-doh" onclick="setBg('doh')">doh</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-tag">Software/Game Developer & Researcher</div>
+        <h1 class="hero-name">Ali<br><em>Moghimi</em></h1>
+        <p class="hero-desc">
+            * Passionate about technical game research<br>
+            * Learning new technologies<br>
+            * Building my own games.
+        </p>
+        <div class="hero-links">
+            <a href="https://github.com/AliMoghimii" class="btn btn-primary" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/a-moghimi/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+            <a href="https://alimoghimi.itch.io/" class="btn btn-secondary" target="_blank">itch.io</a>
+        </div>
+
+        <div class="hero-graphic">
+            <div class="hero-graphic-inner">
+                <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="130" cy="130" r="100" stroke="#1e1e2e" stroke-width="1"/>
+                    <circle cx="130" cy="130" r="70" stroke="#1e1e2e" stroke-width="1"/>
+                    <circle cx="130" cy="130" r="40" stroke="#1e1e2e" stroke-width="1"/>
+                    <circle cx="130" cy="130" r="4" fill="#FFC90E"/>
+                    <line x1="130" y1="30" x2="130" y2="230" stroke="#1e1e2e" stroke-width="1"/>
+                    <line x1="30" y1="130" x2="230" y2="130" stroke="#1e1e2e" stroke-width="1"/>
+                    <line x1="59" y1="59" x2="201" y2="201" stroke="#1e1e2e" stroke-width="1"/>
+                    <line x1="201" y1="59" x2="59" y2="201" stroke="#1e1e2e" stroke-width="1"/>
+                    <circle cx="130" cy="30" r="3" fill="#FFC90E" opacity="0.6"/>
+                    <circle cx="130" cy="230" r="3" fill="#FFC90E" opacity="0.6"/>
+                    <circle cx="30" cy="130" r="3" fill="#FFC90E" opacity="0.6"/>
+                    <circle cx="230" cy="130" r="3" fill="#FFC90E" opacity="0.6"/>
+                    <circle cx="188.6" cy="71.4" r="3" fill="#f4a261" opacity="0.5"/>
+                    <circle cx="71.4" cy="188.6" r="3" fill="#f4a261" opacity="0.5"/>
+                    <circle cx="71.4" cy="71.4" r="3" fill="#f4a261" opacity="0.5"/>
+                    <circle cx="188.6" cy="188.6" r="3" fill="#f4a261" opacity="0.5"/>
+                    <path d="M 130 60 A 70 70 0 0 1 200 130" stroke="#FFC90E" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
+                    <path d="M 200 130 A 70 70 0 0 1 130 200" stroke="#f4a261" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+                    <rect x="114" y="114" width="32" height="32" rx="4" stroke="#FFC90E" stroke-width="1.5" opacity="0.7"/>
+                    <circle cx="130" cy="130" r="120" stroke="#FFC90E" stroke-width="0.5" opacity="0.15"/>
+                    <text x="136" y="24" font-family="Space Mono, monospace" font-size="9" fill="#FFC90E" opacity="0.6">N</text>
+                    <text x="136" y="244" font-family="Space Mono, monospace" font-size="9" fill="#FFC90E" opacity="0.6">S</text>
+                    <text x="16" y="134" font-family="Space Mono, monospace" font-size="9" fill="#FFC90E" opacity="0.6">W</text>
+                    <text x="236" y="134" font-family="Space Mono, monospace" font-size="9" fill="#FFC90E" opacity="0.6">E</text>
+                </svg>
+                <img src="profile.png" alt="Ali Moghimi" class="profile-photo">
+            </div>
+        </div>
+
+        <div class="scroll-hint">SCROLL</div>
+    </div>
+
+    <div class="wip-banner">
+        <div class="wip-inner">
+            <div class="wip-dot"></div>
+            <span>This portfolio is a work in progress - more projects and content coming soon.</span>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="section-label">01 - About</div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I'm a passionate software/game developer and a researcher</p>
+                <p>I'm interested in technical game research, such as engine architecture, graphics, PCG, physics, gameplay systems and I love building things of my own from scratch.</p>
+                <p>When I'm not working/studying, I'm developing my own personal games and experimenting with new technologies.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Current</div>
+                    <div class="stat-degree">MSc Computer Science for Games Programming</div>
+                    <div class="stat-uni">University of Hull</div>
+                    <div class="stat-location">Kingston upon Hull, United Kingdom</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">2022</div>
+                    <div class="stat-degree">BSc Computer Engineering</div>
+                    <div class="stat-uni">Shahid Beheshti University</div>
+                    <div class="stat-location">Tehran, Iran</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-label">02 - Skills &amp; Tools</div>
+        <div class="skills-grid">
+            <div class="skill-chip"><img src="cpp.svg" alt="C++"><span>C++</span></div>
+            <div class="skill-chip"><img src="cs.svg" alt="C#"><span>C#</span></div>
+            <div class="skill-chip"><img src="python.svg" alt="Python"><span>Python</span></div>
+            <div class="skill-chip"><img src="java.svg" alt="Java"><span>Java</span></div>
+            <div class="skill-chip"><img src="go.svg" alt="Go"><span>Go</span></div>
+            <div class="skill-chip"><img src="unity.svg" alt="Unity"><span>Unity</span></div>
+            <div class="skill-chip"><img src="unrealengine.svg" alt="Unreal Engine"><span>Unreal</span></div>
+            <div class="skill-chip"><img src="godot.svg" alt="Godot"><span>Godot</span></div>
+            <div class="skill-chip"><img src="vulkan.svg" alt="Vulkan"><span>Vulkan</span></div>
+            <div class="skill-chip"><img src="threejs.svg" alt="Three.js"><span>Three.js</span></div>
+            <div class="skill-chip"><img src="html5.svg" alt="HTML5"><span>HTML</span></div>
+            <div class="skill-chip"><img src="css3.svg" alt="CSS3"><span>CSS</span></div>
+            <div class="skill-chip"><img src="javascript.svg" alt="JavaScript"><span>JS</span></div>
+            <div class="skill-chip"><img src="react.svg" alt="React"><span>React</span></div>
+            <div class="skill-chip"><img src="git.svg" alt="Git"><span>Git</span></div>
+            <div class="skill-chip"><img src="blender.svg" alt="Blender"><span>Blender</span></div>
+            <div class="skill-chip"><img src="rhino.svg" alt="Rhino3D"><span>Rhino3D</span></div>
+
+        </div>
+    </section>
+
+    <section id="connect">
+        <div class="section-label">03 - Connect</div>
+        <div class="connect-grid">
+            <a href="https://github.com/AliMoghimii" class="connect-card" target="_blank">
+                <div class="connect-icon"><img src="github.svg" alt="GitHub" style="width:20px;height:20px;"></div>
+                <div class="connect-name">GitHub</div>
+                <div class="connect-handle">@AliMoghimii</div>
+                <div class="connect-arrow">↗</div>
+            </a>
+            <a href="https://www.linkedin.com/in/a-moghimi/" class="connect-card" target="_blank">
+                <div class="connect-icon"><img src="linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;"></div>
+                <div class="connect-name">LinkedIn</div>
+                <div class="connect-handle">a-moghimi</div>
+                <div class="connect-arrow">↗</div>
+            </a>
+            <a href="https://alimoghimi.itch.io/" class="connect-card" target="_blank">
+                <div class="connect-icon"><img src="itchio.svg" alt="itch.io" style="width:20px;height:20px;"></div>
+                <div class="connect-name">itch.io</div>
+                <div class="connect-handle">alimoghimi</div>
+                <div class="connect-arrow">↗</div>
+            </a>
+            <a href="mailto:ali.moghimi.dev@gmail.com" class="connect-card">
+                <div class="connect-icon"><img src="email.svg" alt="Email" style="width:20px;height:20px;"></div>
+                <div class="connect-name">Email</div>
+                <div class="connect-handle">ali.moghimi.dev</div>
+                <div class="connect-arrow">↗</div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ali Moghimi (Doughnut model by myself)</p>
+        <p>Template - Work in Progress</p>
+    </footer>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+
+        const canvas = document.getElementById('hero-canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+
+        const scene  = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+        camera.position.z = 5;
+
+        const mat = new THREE.MeshBasicMaterial({
+            color: 0xFFC90E,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.055
+        });
+
+        const icoGeo  = new THREE.IcosahedronGeometry(2.6, 1);
+        const icoMesh = new THREE.Mesh(icoGeo, mat);
+        scene.add(icoMesh);
+        let activeMesh = icoMesh;
+
+        let objMesh = null;
+        const loader = new OBJLoader();
+        loader.load('model.obj', (obj) => {
+            obj.traverse(child => {
+                if (child.isMesh) child.material = mat;
+            });
+            const box = new THREE.Box3().setFromObject(obj);
+            const centre = new THREE.Vector3();
+            box.getCenter(centre);
+            obj.position.sub(centre);
+            const size = new THREE.Vector3();
+            box.getSize(size);
+            obj.scale.setScalar(6 / Math.max(size.x, size.y, size.z));
+            obj.visible = false;
+            scene.add(obj);
+            objMesh = obj;
+        });
+
+        window.setBg = function(mode) {
+            document.getElementById('btn-eco').classList.toggle('active', mode === 'eco');
+            document.getElementById('btn-doh').classList.toggle('active', mode === 'doh');
+            icoMesh.visible = mode === 'eco';
+            if (objMesh) objMesh.visible = mode === 'doh';
+            activeMesh = mode === 'eco' ? icoMesh : (objMesh || icoMesh);
+            document.getElementById('settings-wrap').classList.remove('open');
+        };
+
+        window.toggleSettings = function() {
+            document.getElementById('settings-wrap').classList.toggle('open');
+        };
+
+        document.addEventListener('click', (e) => {
+            const wrap = document.getElementById('settings-wrap');
+            if (!wrap.contains(e.target)) wrap.classList.remove('open');
+        });
+
+        const aboutSection = document.getElementById('about');
+        window.addEventListener('scroll', () => {
+            const shift = (window.scrollY / window.innerHeight) * 3;
+            if (icoMesh) icoMesh.position.y = shift;
+            if (objMesh) objMesh.position.y = shift;
+
+            const aboutTop = aboutSection.getBoundingClientRect().top;
+            const fadeProgress = Math.min(Math.max((200 - aboutTop) / 200, 0), 1);
+            canvas.style.opacity = 1 - fadeProgress;
+        }, { passive: true });
+
+        function resize() {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            renderer.setSize(w, h, false);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        (function animate() {
+            requestAnimationFrame(animate);
+            if (activeMesh) {
+                activeMesh.rotation.x += 0.0018;
+                activeMesh.rotation.y += 0.0028;
+            }
+            renderer.render(scene, camera);
+        })();
+    </script>
+
+</body>
+</html>
