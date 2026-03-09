@@ -21,7 +21,7 @@
             --surface: #111118;
             --border: #1e1e2e;
             --accent: #FFC90E;
-            --accent2: #f4a261;
+            --accent2: #153B94;
             --text: #e8e8f0;
             --muted: #6b6b80;
             --grid: rgba(127,219,202,0.04);
@@ -272,10 +272,10 @@
         }
 
         .btn-primary { background: var(--accent); color: var(--bg); font-weight: 700; }
-        .btn-primary:hover { background: #a0ede0; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(127,219,202,0.22); }
+        .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(127,219,202,0.22); }
 
         .btn-secondary { border: 1px solid var(--border); color: var(--text); background: var(--surface); }
-        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+        .btn-secondary:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
 
         .hero-graphic {
             position: absolute;
@@ -415,7 +415,7 @@
             transition: border-color 0.2s;
         }
 
-        .stat-card:hover { border-color: var(--accent); }
+        .stat-card:hover { border-color: var(--accent2); }
 
         .stat-label {
             font-family: 'Space Mono', monospace;
@@ -450,9 +450,9 @@
         }
 
         .skill-chip:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(127,219,202,0.04);
+            border-color: var(--accent2);
+            color: var(--accent2);
+            background: rgba(21, 59, 148, 0.199);
             transform: translateY(-3px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
@@ -474,7 +474,7 @@
             transition: all 0.22s;
         }
 
-        .connect-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.45); }
+        .connect-card:hover { border-color: var(--accent2); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.45); }
 
         .connect-icon {
             width: 38px; height: 38px;
@@ -590,12 +590,12 @@
                     <circle cx="130" cy="230" r="3" fill="#FFC90E" opacity="0.6"/>
                     <circle cx="30" cy="130" r="3" fill="#FFC90E" opacity="0.6"/>
                     <circle cx="230" cy="130" r="3" fill="#FFC90E" opacity="0.6"/>
-                    <circle cx="188.6" cy="71.4" r="3" fill="#f4a261" opacity="0.5"/>
-                    <circle cx="71.4" cy="188.6" r="3" fill="#f4a261" opacity="0.5"/>
-                    <circle cx="71.4" cy="71.4" r="3" fill="#f4a261" opacity="0.5"/>
-                    <circle cx="188.6" cy="188.6" r="3" fill="#f4a261" opacity="0.5"/>
+                    <circle cx="188.6" cy="71.4" r="3" fill="#153B94" opacity="0.5"/>
+                    <circle cx="71.4" cy="188.6" r="3" fill="#153B94" opacity="0.5"/>
+                    <circle cx="71.4" cy="71.4" r="3" fill="#153B94" opacity="0.5"/>
+                    <circle cx="188.6" cy="188.6" r="3" fill="#153B94" opacity="0.5"/>
                     <path d="M 130 60 A 70 70 0 0 1 200 130" stroke="#FFC90E" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
-                    <path d="M 200 130 A 70 70 0 0 1 130 200" stroke="#f4a261" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+                    <path d="M 200 130 A 70 70 0 0 1 130 200" stroke="#153B94" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
                     <rect x="114" y="114" width="32" height="32" rx="4" stroke="#FFC90E" stroke-width="1.5" opacity="0.7"/>
                     <circle cx="130" cy="130" r="120" stroke="#FFC90E" stroke-width="0.5" opacity="0.15"/>
                     <text x="136" y="24" font-family="Space Mono, monospace" font-size="9" fill="#FFC90E" opacity="0.6">N</text>
