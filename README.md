@@ -20,20 +20,24 @@
 ## 💻 Skills & Technologies
 
 <p align="center">
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" width="40" height="40"/></a>      
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40" /></a>
-  <a href="https://github.com/AliMoghimii"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./cpp.svg" width="40" height="40" alt="C++" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./cs.svg" width="40" height="40" alt="C#" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./python.svg" width="40" height="40" alt="Python" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./java.svg" width="40" height="40" alt="Java" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./androidstudio.svg" width="40" height="40" alt="Android Studio" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./unity.svg" width="40" height="40" alt="Unity" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./unrealengine.svg" width="40" height="40" alt="Unreal Engine" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./godot.svg" width="40" height="40" alt="Godot" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./vulkan.svg" width="40" height="40" alt="Vulkan" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./threejs.svg" width="40" height="40" alt="Three.js" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./html5.svg" width="40" height="40" alt="HTML5" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./css3.svg" width="40" height="40" alt="CSS3" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./javascript.svg" width="40" height="40" alt="JavaScript" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./react.svg" width="40" height="40" alt="React" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./go.svg" width="40" height="40" alt="Go" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./git.svg" width="40" height="40" alt="Git" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./blender.svg" width="40" height="40" alt="Blender" /></a>
+<a href="https://github.com/AliMoghimii"><img src="./rhino.svg" width="40" height="40" alt="Rhino3D" /></a>
     
 </p>
 
